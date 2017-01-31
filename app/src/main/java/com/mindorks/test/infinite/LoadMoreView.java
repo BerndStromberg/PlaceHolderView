@@ -5,10 +5,9 @@ import android.os.Looper;
 import android.util.Log;
 
 import com.mindorks.placeholderview.InfinitePlaceHolderView;
-import com.mindorks.placeholderview.annotations.Layout;
 import com.mindorks.placeholderview.annotations.infinite.LoadMore;
+import com.mindorks.placeholderview.common.Layout;
 import com.mindorks.test.R;
-import com.mindorks.test.gallery.ImageTypeBig;
 
 import java.util.List;
 

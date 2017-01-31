@@ -3,13 +3,10 @@ package com.mindorks.test.drawer;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mindorks.placeholderview.PlaceHolderView;
-import com.mindorks.placeholderview.annotations.Click;
-import com.mindorks.placeholderview.annotations.Layout;
-import com.mindorks.placeholderview.annotations.LongClick;
-import com.mindorks.placeholderview.annotations.NonReusable;
-import com.mindorks.placeholderview.annotations.Resolve;
-import com.mindorks.placeholderview.annotations.View;
+import com.mindorks.placeholderview.common.Layout;
+import com.mindorks.placeholderview.common.NonReusable;
+import com.mindorks.placeholderview.common.Resolve;
+import com.mindorks.placeholderview.common.View;
 import com.mindorks.test.R;
 
 /**

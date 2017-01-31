@@ -9,8 +9,8 @@ import com.mindorks.placeholderview.annotations.expand.Parent;
 import com.mindorks.placeholderview.annotations.expand.ParentPosition;
 import com.mindorks.placeholderview.annotations.expand.SingleTop;
 import com.mindorks.placeholderview.annotations.expand.Toggle;
+import com.mindorks.placeholderview.common.ViewBinder;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * Created by janisharali on 18/08/16.
  */
-public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBinder<T, V>{
+public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBinder<T, V> {
 
     private boolean isParent = false;
     private boolean isExpanded = false;
@@ -45,7 +45,7 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      *
      * @return
      */
-    protected boolean bindViewType(){
+    public boolean bindViewType() {
         T resolver = getResolver();
         Parent parent = resolver.getClass().getAnnotation(Parent.class);
         if(parent != null) {
@@ -58,7 +58,7 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      *
      * @param resolver
      */
-    protected void bindCollapseProperty(final T resolver){
+    public void bindCollapseProperty(final T resolver) {
         SingleTop singleTop = resolver.getClass().getAnnotation(SingleTop.class);
         if(singleTop != null) {
             isSingleTop = singleTop.value();
@@ -69,7 +69,7 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      *
      * @param position
      */
-    protected void bindParentPosition(int position){
+    public void bindParentPosition(int position) {
         mParentPosition = position;
         T resolver = getResolver();
         for(final Field field : resolver.getClass().getDeclaredFields()) {
@@ -89,7 +89,7 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      *
      * @param position
      */
-    protected void bindChildPosition(int position){
+    public void bindChildPosition(int position) {
         mChildPosition = position;
         T resolver = getResolver();
         for(final Field field : resolver.getClass().getDeclaredFields()) {
@@ -111,7 +111,7 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      * @param position
      */
     @Override
-    protected void bindView(V promptsView, int position) {
+    public void bindView(V promptsView, int position) {
         super.bindView(promptsView, position);
         if(isParent){
             bindToggle(getResolver(), promptsView);
@@ -204,7 +204,8 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      */
     @Override
     @Deprecated
-    protected void unbind() {}
+    public void unbind() {
+    }
 
     /**
      *
@@ -214,13 +215,14 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      */
     @Override
     @Deprecated
-    protected void bindAnimation(int deviceWidth, int deviceHeight, V view) {}
+    public void bindAnimation(int deviceWidth, int deviceHeight, V view) {
+    }
 
     /**
      *
      * @param callback
      */
-    protected void setCallback(ExpansionCallback callback) {
+    public void setCallback(ExpansionCallback callback) {
         mCallback = callback;
     }
 
@@ -228,23 +230,14 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      *
      * @return
      */
-    protected List<ExpandableViewBinder<T, V>> getChildList() {
+    public List<ExpandableViewBinder<T, V>> getChildList() {
         return mChildList;
     }
 
     /**
      *
-     * @param <T>
      */
-    protected interface ExpansionCallback<T>{
-        void onExpand(ExpandableViewBinder<T, View> parentBinder);
-        void onCollapse(ExpandableViewBinder<T, View> parentBinder);
-    }
-
-    /**
-     *
-     */
-    protected void collapse(){
+    public void collapse() {
         if(isParent && mCallback != null && isExpanded){
             mCallback.onCollapse(this);
             bindCollapse(getResolver());
@@ -255,7 +248,7 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
     /**
      *
      */
-    protected void expand(){
+    public void expand() {
         if(isParent && mCallback != null && !isExpanded){
             mCallback.onExpand(this);
             bindExpand(getResolver());
@@ -267,7 +260,7 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      *
      * @return
      */
-    protected boolean isParent() {
+    public boolean isParent() {
         return isParent;
     }
 
@@ -275,7 +268,7 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      *
      * @return
      */
-    protected boolean isExpanded() {
+    public boolean isExpanded() {
         return isExpanded;
     }
 
@@ -283,7 +276,7 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      *
      * @return
      */
-    protected boolean isSingleTop() {
+    public boolean isSingleTop() {
         return isSingleTop;
     }
 
@@ -291,7 +284,7 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      *
      * @return
      */
-    protected int getChildPosition() {
+    public int getChildPosition() {
         return mChildPosition;
     }
 
@@ -299,7 +292,7 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      *
      * @return
      */
-    protected int getParentPosition() {
+    public int getParentPosition() {
         return mParentPosition;
     }
 
@@ -307,7 +300,7 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      *
      * @return
      */
-    protected ExpandableViewBinder<T, V> getParentViewBinder() {
+    public ExpandableViewBinder<T, V> getParentViewBinder() {
         return mParentViewBinder;
     }
 
@@ -315,7 +308,16 @@ public class ExpandableViewBinder<T, V extends android.view.View> extends ViewBi
      *
      * @param mParentViewBinder
      */
-    protected void setParentViewBinder(ExpandableViewBinder<T, V> mParentViewBinder) {
+    public void setParentViewBinder(ExpandableViewBinder<T, V> mParentViewBinder) {
         this.mParentViewBinder = mParentViewBinder;
+    }
+
+    /**
+     * @param <T>
+     */
+    public interface ExpansionCallback<T> {
+        void onExpand(ExpandableViewBinder<T, View> parentBinder);
+
+        void onCollapse(ExpandableViewBinder<T, View> parentBinder);
     }
 }

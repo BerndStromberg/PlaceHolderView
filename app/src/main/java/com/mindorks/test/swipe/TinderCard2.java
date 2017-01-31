@@ -4,16 +4,16 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mindorks.placeholderview.annotations.Click;
-import com.mindorks.placeholderview.annotations.Layout;
-import com.mindorks.placeholderview.annotations.NonReusable;
-import com.mindorks.placeholderview.annotations.Resolve;
-import com.mindorks.placeholderview.annotations.View;
-import com.mindorks.placeholderview.annotations.swipe.SwipeCancelState;
-import com.mindorks.placeholderview.annotations.swipe.SwipeIn;
-import com.mindorks.placeholderview.annotations.swipe.SwipeInState;
-import com.mindorks.placeholderview.annotations.swipe.SwipeOut;
-import com.mindorks.placeholderview.annotations.swipe.SwipeOutState;
+import com.mindorks.placeholderview.common.Click;
+import com.mindorks.placeholderview.common.Layout;
+import com.mindorks.placeholderview.common.NonReusable;
+import com.mindorks.placeholderview.common.Resolve;
+import com.mindorks.placeholderview.common.View;
+import com.mindorks.swipeplaceholderview.swipe.SwipeCancelState;
+import com.mindorks.swipeplaceholderview.swipe.SwipeIn;
+import com.mindorks.swipeplaceholderview.swipe.SwipeInState;
+import com.mindorks.swipeplaceholderview.swipe.SwipeOut;
+import com.mindorks.swipeplaceholderview.swipe.SwipeOutState;
 import com.mindorks.test.R;
 
 /**
@@ -35,13 +35,13 @@ public class TinderCard2 {
     @View(R.id.locationNameTxt)
     private TextView locationNameTxt;
 
+    public TinderCard2(CardCallback callback) {
+        this.callback = callback;
+    }
+
     @Click(R.id.profileImageView)
     private void onClick(){
         Log.d("DEBUG", "profileImageView");
-    }
-
-    public TinderCard2(CardCallback callback) {
-        this.callback = callback;
     }
 
     @Resolve

@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mindorks.placeholderview.common.Utils;
+import com.mindorks.placeholderview.common.ViewBinder;
+
 import java.util.ArrayList;
 import java.util.List;
 

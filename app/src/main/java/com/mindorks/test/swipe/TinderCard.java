@@ -1,32 +1,20 @@
 package com.mindorks.test.swipe;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.Point;
-import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.Display;
-import android.view.Gravity;
-import android.view.WindowManager;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mindorks.placeholderview.SwipePlaceHolderView;
-import com.mindorks.placeholderview.annotations.Click;
-import com.mindorks.placeholderview.annotations.Layout;
-import com.mindorks.placeholderview.annotations.NonReusable;
-import com.mindorks.placeholderview.annotations.Position;
-import com.mindorks.placeholderview.annotations.Resolve;
-import com.mindorks.placeholderview.annotations.View;
-import com.mindorks.placeholderview.annotations.swipe.SwipeCancelState;
-import com.mindorks.placeholderview.annotations.swipe.SwipeIn;
-import com.mindorks.placeholderview.annotations.swipe.SwipeInState;
-import com.mindorks.placeholderview.annotations.swipe.SwipeOut;
-import com.mindorks.placeholderview.annotations.swipe.SwipeOutState;
-import com.mindorks.placeholderview.annotations.swipe.SwipeView;
+import com.mindorks.placeholderview.common.Click;
+import com.mindorks.placeholderview.common.Layout;
+import com.mindorks.placeholderview.common.NonReusable;
+import com.mindorks.placeholderview.common.Resolve;
+import com.mindorks.placeholderview.common.View;
+import com.mindorks.swipeplaceholderview.swipe.SwipeCancelState;
+import com.mindorks.swipeplaceholderview.swipe.SwipeIn;
+import com.mindorks.swipeplaceholderview.swipe.SwipeInState;
+import com.mindorks.swipeplaceholderview.swipe.SwipeOut;
+import com.mindorks.swipeplaceholderview.swipe.SwipeOutState;
 import com.mindorks.test.R;
-import com.mindorks.test.Utils;
 
 /**
  * Created by janisharali on 19/08/16.

@@ -5,18 +5,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.mindorks.placeholderview.annotations.Layout;
-import com.mindorks.placeholderview.annotations.Resolve;
-import com.mindorks.placeholderview.annotations.View;
 import com.mindorks.placeholderview.annotations.expand.Collapse;
 import com.mindorks.placeholderview.annotations.expand.Expand;
 import com.mindorks.placeholderview.annotations.expand.Parent;
 import com.mindorks.placeholderview.annotations.expand.ParentPosition;
 import com.mindorks.placeholderview.annotations.expand.SingleTop;
 import com.mindorks.placeholderview.annotations.expand.Toggle;
+import com.mindorks.placeholderview.common.Layout;
+import com.mindorks.placeholderview.common.Resolve;
+import com.mindorks.placeholderview.common.View;
 import com.mindorks.test.R;
-
-import java.util.List;
 
 /**
  * Created by janisharali on 24/08/16.

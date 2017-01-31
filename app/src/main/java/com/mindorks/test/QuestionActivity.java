@@ -5,13 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.mindorks.placeholderview.SwipeDecor;
-import com.mindorks.placeholderview.SwipePlaceHolderView;
-import com.mindorks.placeholderview.annotations.Click;
-import com.mindorks.placeholderview.annotations.Layout;
-import com.mindorks.placeholderview.annotations.NonReusable;
-import com.mindorks.placeholderview.annotations.Resolve;
-import com.mindorks.placeholderview.annotations.View;
+import com.mindorks.placeholderview.common.Click;
+import com.mindorks.placeholderview.common.Layout;
+import com.mindorks.placeholderview.common.NonReusable;
+import com.mindorks.placeholderview.common.Resolve;
+import com.mindorks.placeholderview.common.View;
+import com.mindorks.swipeplaceholderview.SwipeDecor;
+import com.mindorks.swipeplaceholderview.SwipePlaceHolderView;
 
 public class QuestionActivity extends AppCompatActivity {
 

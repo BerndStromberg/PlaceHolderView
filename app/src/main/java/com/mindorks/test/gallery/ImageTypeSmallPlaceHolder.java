@@ -2,17 +2,14 @@ package com.mindorks.test.gallery;
 
 import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
-import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
-import com.mindorks.placeholderview.Animation;
 import com.mindorks.placeholderview.PlaceHolderView;
-import com.mindorks.placeholderview.annotations.Animate;
-import com.mindorks.placeholderview.annotations.Layout;
-import com.mindorks.placeholderview.annotations.LongClick;
-import com.mindorks.placeholderview.annotations.NonReusable;
-import com.mindorks.placeholderview.annotations.Resolve;
-import com.mindorks.placeholderview.annotations.View;
+import com.mindorks.placeholderview.common.Animate;
+import com.mindorks.placeholderview.common.Animation;
+import com.mindorks.placeholderview.common.Layout;
+import com.mindorks.placeholderview.common.NonReusable;
+import com.mindorks.placeholderview.common.Resolve;
+import com.mindorks.placeholderview.common.View;
 import com.mindorks.test.Image;
 import com.mindorks.test.R;
 

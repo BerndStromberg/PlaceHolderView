@@ -8,9 +8,9 @@ import android.util.Log;
 import com.mindorks.butterknifelite.ButterKnifeLite;
 import com.mindorks.butterknifelite.annotations.BindView;
 import com.mindorks.butterknifelite.annotations.OnClick;
-import com.mindorks.placeholderview.SwipeDecor;
-import com.mindorks.placeholderview.SwipePlaceHolderView;
-import com.mindorks.placeholderview.listeners.ItemRemovedListener;
+import com.mindorks.swipeplaceholderview.SwipeDecor;
+import com.mindorks.swipeplaceholderview.SwipePlaceHolderView;
+import com.mindorks.swipeplaceholderview.listeners.ItemRemovedListener;
 import com.mindorks.test.swipe.TinderCard;
 
 public class ActivityTinder extends AppCompatActivity {

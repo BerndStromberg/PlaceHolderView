@@ -5,19 +5,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.mindorks.placeholderview.Animation;
 import com.mindorks.placeholderview.ExpandablePlaceHolderView;
-import com.mindorks.placeholderview.annotations.Animate;
-import com.mindorks.placeholderview.annotations.Click;
-import com.mindorks.placeholderview.annotations.Layout;
-import com.mindorks.placeholderview.annotations.Resolve;
-import com.mindorks.placeholderview.annotations.View;
 import com.mindorks.placeholderview.annotations.expand.ChildPosition;
-import com.mindorks.placeholderview.annotations.expand.Parent;
 import com.mindorks.placeholderview.annotations.expand.ParentPosition;
+import com.mindorks.placeholderview.common.Click;
+import com.mindorks.placeholderview.common.Layout;
+import com.mindorks.placeholderview.common.Resolve;
+import com.mindorks.placeholderview.common.View;
 import com.mindorks.test.R;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
